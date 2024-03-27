@@ -5,7 +5,7 @@
 }
 
 body {
-    max-width: 1500px;
+    max-width: 2500px;
     font-family: sans-serif;
     color: white;
 }
@@ -127,8 +127,17 @@ main {
 
 .card {
     flex-direction: column;
-    width: 20%;
+    max-width: 15%;
     gap: 1rem;
+}
+
+.title-song {
+    font-weight: bold;
+    color: white;
+}
+
+.popolari img {
+    border-radius: 50%;
 }
 
 /* FOOTER SELECTION  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
