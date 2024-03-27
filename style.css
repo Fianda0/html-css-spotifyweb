@@ -127,7 +127,7 @@ main {
 
 .card {
     flex-direction: column;
-    max-width: 15%;
+    width: calc(100% /4 - 1rem);
     gap: 1rem;
 }
 
@@ -136,6 +136,7 @@ main {
     color: white;
 }
 
+
 .popolari img {
     border-radius: 50%;
 }
@@ -143,8 +144,31 @@ main {
 /* FOOTER SELECTION  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 footer {
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     background-color: #282828;
     width: 100%;
     height: 5rem;
+}
+
+.ascolto {
+    width: 13rem;
+    align-items: center;
+}
+
+.img-ascolto {
+    padding: 0.5rem;
+    width: calc(100% / 3);
+    margin-right: 0.5rem;
+}
+
+.name {
+    width: calc(100% / 3);
+}
+
+.item {
+    width: calc(100% / 3);
+    text-align: end;
 }
