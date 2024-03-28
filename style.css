@@ -172,3 +172,38 @@ footer {
     width: calc(100% / 3);
     text-align: end;
 }
+
+.riproduzione {
+    width: calc(50%);
+}
+
+.item-rip {
+    text-align: center;
+}
+
+.item-rip i {
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.time {
+    padding-top: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer hr {
+    width: 70%;
+    height: 5px;
+    border-radius: 5px;
+    border-color: #282828;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 33%, rgba(108, 108, 108, 1) 33%);
+}
+
+.audio {
+    padding-right: 1rem;
+    width: 19rem;
+    align-items: center;
+    gap: 0.5rem;
+}
