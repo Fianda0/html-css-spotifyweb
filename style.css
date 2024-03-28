@@ -7,7 +7,7 @@
 body {
     max-width: 2500px;
     font-family: sans-serif;
-    color: white;
+    color: grey;
 }
 
 i {
@@ -20,7 +20,7 @@ img {
 
 a {
     text-decoration: none;
-    color: white;
+    color: grey;
 }
 
 .flex {
@@ -41,6 +41,10 @@ a {
 
 .a-center {
     align-items: center;
+}
+
+.c-white {
+    color: white;
 }
 
 
@@ -81,6 +85,10 @@ nav {
     bottom: 1rem;
 }
 
+.hover-white:hover {
+    color: white;
+}
+
 /* MAIN SELECTION  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 main {
@@ -102,15 +110,27 @@ main {
     border: 1px solid white;
 }
 
+.upgrade a:hover {
+    scale: 1.1;
+}
+
 .sezione {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.container {}
+.sezione a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.sezione a:hover {
+    color: white;
+    border-bottom: 2px solid green;
+}
 
 .title-section {
+    color: white;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -118,6 +138,31 @@ main {
 .song {
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.img-song {
+    position: relative;
+}
+
+.img-song:hover .hover-img {
+    display: flex;
+}
+
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.hover-img i {
+    color: white;
+    font-size: 3rem;
 }
 
 .song img {
@@ -168,6 +213,11 @@ footer {
     width: calc(100% / 3);
 }
 
+.artist:hover a {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
 .item {
     width: calc(100% / 3);
     text-align: end;
@@ -186,19 +236,46 @@ footer {
     font-size: 1.5rem;
 }
 
+.item-rip i:hover {
+    color: white;
+    scale: 1.2;
+}
+
 .time {
     padding-top: 0.5rem;
     justify-content: space-around;
     align-items: center;
 }
 
-footer hr {
+.bar {
     width: 70%;
+    position: relative;
+    padding-top: 0.2rem;
+}
+
+footer hr {
     height: 5px;
     border-radius: 5px;
     border-color: #282828;
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 33%, rgba(108, 108, 108, 1) 33%);
+}
+
+.bar:hover hr {
+    background: rgb(0, 255, 31);
+    background: linear-gradient(90deg, rgba(0, 255, 31, 1) 33%, rgba(108, 108, 108, 1) 33%);
+}
+
+.bar:hover .ball {
+    display: block;
+}
+
+.ball {
+    position: absolute;
+    top: 0;
+    left: 33%;
+    color: white;
+    display: none;
 }
 
 .audio {
