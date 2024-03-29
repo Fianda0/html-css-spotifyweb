@@ -8,6 +8,7 @@ body {
     max-width: 2500px;
     font-family: sans-serif;
     color: grey;
+    margin: 0 auto;
 }
 
 i {
@@ -16,6 +17,7 @@ i {
 
 img {
     width: 100%;
+    display: block;
 }
 
 a {
@@ -50,10 +52,18 @@ a {
 
 /* HEADER SELECTION  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-header {
+.header1 {
     background-color: black;
     width: 13rem;
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 6rem);
+    position: relative;
+}
+
+.header2 {
+    display: none;
+    background-color: black;
+    width: 5rem;
+    height: calc(100vh - 6rem);
     position: relative;
 }
 
@@ -95,7 +105,7 @@ main {
     overflow: auto;
     background-color: #141922;
     width: calc(100% - 13rem);
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 6rem);
 }
 
 .upgrade {
@@ -189,28 +199,27 @@ main {
 /* FOOTER SELECTION  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 footer {
+    width: 100%;
     padding: 1rem 0;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     background-color: #282828;
-    width: 100%;
-    height: 5rem;
+    height: 6rem;
 }
 
 .ascolto {
-    width: 13rem;
+    width: 20%;
     align-items: center;
 }
 
 .img-ascolto {
-    padding: 0.5rem;
-    width: calc(100% / 3);
-    margin-right: 0.5rem;
+    width: 5rem;
+    margin: 0 0.5rem;
 }
 
 .name {
-    width: calc(100% / 3);
+    width: 40%;
 }
 
 .artist:hover a {
@@ -219,21 +228,22 @@ footer {
 }
 
 .item {
-    width: calc(100% / 3);
+    width: 40%;
+    justify-content: end;
     text-align: end;
 }
 
 .riproduzione {
-    width: calc(50%);
+    width: 50%;
 }
 
 .item-rip {
-    text-align: center;
+    justify-content: center;
 }
 
 .item-rip i {
+    font-size: 1.2rem;
     padding: 0 0.5rem;
-    font-size: 1.5rem;
 }
 
 .item-rip i:hover {
@@ -242,15 +252,20 @@ footer {
 }
 
 .time {
-    padding-top: 0.5rem;
     justify-content: space-around;
     align-items: center;
+}
+
+.audio {
+    width: 30%;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .bar {
     width: 70%;
     position: relative;
-    padding-top: 0.2rem;
 }
 
 footer hr {
@@ -272,15 +287,71 @@ footer hr {
 
 .ball {
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 33%;
     color: white;
     display: none;
 }
 
-.audio {
-    padding-right: 1rem;
-    width: 19rem;
-    align-items: center;
-    gap: 0.5rem;
+
+@media all and (min-width:1440px) {
+    footer {
+        background-color: red;
+    }
+
+    .card {
+        width: calc(100% /6 - 1rem);
+    }
 }
+
+@media all and (max-width:990px) {
+    footer {
+        background-color: green;
+    }
+
+    .card {
+        width: calc(100% /2 - 1rem);
+    }
+}
+
+@media all and (max-width:576px) {
+    footer {
+        background-color: blue;
+    }
+
+    .header1 {
+        display: none;
+    }
+
+    .header2 {
+        display: block;
+        text-align: center;
+    }
+
+    .header2 i {
+        font-size: 2rem;
+    }
+
+    main {
+        width: calc(100% - 5rem);
+    }
+
+    .ascolto {
+        width: 30%;
+    }
+
+    .riproduzione {
+        width: 40%;
+    }
+
+    .card {
+        width: calc(100% /2 - 1rem);
+    }
+
+    .time {
+        justify-content: space-evenly;
+    }
+
+    .bar {
+        width: 40%;
+    }
